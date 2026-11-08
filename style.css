@@ -1,7 +1,5 @@
 
-/* =========================================
-   GENERAL STYLE
-========================================= */
+/* General */
 
 * {
     box-sizing: border-box;
@@ -23,9 +21,7 @@ body {
 }
 
 
-/* =========================================
-   NAVIGATION
-========================================= */
+/* navigation */
 
 .header {
     padding: 0 50px;
@@ -71,9 +67,7 @@ body {
 }
 
 
-/* =========================================
-   HOME / HERO
-========================================= */
+/* home */
 
 .hero {
     width: 83%;
@@ -160,10 +154,7 @@ body {
     margin-left: 12px;
 }
 
-
-/* =========================================
-   PANELS
-========================================= */
+/* panel */
 
 .panel {
     width: 86%;
@@ -183,10 +174,8 @@ h2 {
     margin: 0 0 10px;
 }
 
+/* about */
 
-/* =========================================
-   ABOUT
-========================================= */
 
 .about-text {
     width: 50%;
@@ -209,9 +198,7 @@ h2 {
 }
 
 
-/* =========================================
-   BUTTONS
-========================================= */
+/* buttons */
 
 .outline-link {
     display: inline-flex;
@@ -257,9 +244,7 @@ h2 {
 }
 
 
-/* =========================================
-   SKILLS
-========================================= */
+/* skiils */
 
 .section {
     width: 84%;
@@ -321,9 +306,7 @@ h2 {
 .design-bar { width: 95%; }
 
 
-/* =========================================
-   PROJECTS
-========================================= */
+/* projects */
 
 .projects {
     border-spacing: 15px;
@@ -333,12 +316,6 @@ h2 {
     margin-bottom: 15px;
 }
 
-.featured {
-    color: #9ba5b5;
-    font-size: 9px;
-    letter-spacing: 2px;
-    text-align: right;
-}
 
 .project-card {
     width: 50%;
@@ -377,9 +354,7 @@ h2 {
 }
 
 
-/* =========================================
-   ACHIEVEMENTS
-========================================= */
+/* achievements */
 
 .achievements {
     border: none;
@@ -431,9 +406,7 @@ h2 {
 }
 
 
-/* =========================================
-   CONTACT
-========================================= */
+/* contact */
 
 .contact {
     border-spacing: 15px;
@@ -489,9 +462,7 @@ h2 {
 }
 
 
-/* =========================================
-   FOOTER
-========================================= */
+/* footers */
 
 .footer {
     width: 86%;
@@ -502,10 +473,7 @@ h2 {
     text-align: center;
 }
 
-
-/* =========================================
-   TABLET
-========================================= */
+/* tablet responsive */
 
 @media screen and (max-width: 1024px) {
 
@@ -533,9 +501,7 @@ h2 {
 }
 
 
-/* =========================================
-   MOBILE
-========================================= */
+/* mobile */
 
 @media screen and (max-width: 768px) {
 
@@ -545,7 +511,7 @@ h2 {
         font-size: 12px;
     }
 
-    /* NAVIGATION */
+ /* navigation */
 
     .header {
         position: fixed !important;
@@ -606,7 +572,7 @@ h2 {
     }
 
 
-    /* HERO */
+   /* home */
 
     .hero {
         width: 90%;
@@ -684,7 +650,7 @@ h2 {
     }
 
 
-    /* PANELS */
+    /* panel */
 
     .panel {
         width: 90%;
@@ -702,7 +668,7 @@ h2 {
     }
 
 
-    /* ABOUT */
+    /* about */
 
     .about-text,
     .about-picture {
@@ -735,7 +701,7 @@ h2 {
     }
 
 
-    /* SKILLS */
+  /* skills */
 
     .section {
         width: 90%;
@@ -793,7 +759,7 @@ h2 {
     }
 
 
-    /* PROJECTS */
+/* projects */
 
     .projects {
         width: 100%;
@@ -817,11 +783,6 @@ h2 {
         margin-bottom: 10px;
     }
 
-    .featured {
-        font-size: 8px;
-        letter-spacing: 1px;
-        text-align: center;
-    }
 
     .project-card {
         width: 100%;
@@ -855,7 +816,7 @@ h2 {
     }
 
 
-    /* ACHIEVEMENTS */
+ /* achievements */
 
     .achievements {
         width: 100%;
@@ -929,7 +890,7 @@ h2 {
     }
 
 
-    /* CONTACT */
+/* contact */
 
     .contact {
         width: 100%;
@@ -980,7 +941,7 @@ h2 {
     }
 
 
-    /* FOOTER */
+  /* footer */
 
     .footer {
         width: 90%;
@@ -993,9 +954,7 @@ h2 {
 }
 
 
-/* =========================================
-   SMALL MOBILE
-========================================= */
+/* smaller mobile*/
 
 @media screen and (max-width: 480px) {
 
@@ -1104,9 +1063,7 @@ h2 {
 }
 
 
-/* =========================================
-   EXTRA SMALL DEVICES
-========================================= */
+/* extra small */
 
 @media screen and (max-width: 360px) {
 
