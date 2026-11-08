@@ -556,8 +556,6 @@ html {
 
     display: block;
     box-sizing: border-box;
-
-    text-align: center;
 }
 
 .hero-text {
@@ -565,7 +563,7 @@ html {
     display: block;
 
     padding: 0;
-    margin: 0 auto;
+    margin: 0;
 
     text-align: center;
 }
@@ -575,8 +573,6 @@ html {
     font-size: 9px;
     letter-spacing: 2px;
     margin-bottom: 12px;
-
-    text-align: center;
 }
 
 .hero h1 {
@@ -586,7 +582,6 @@ html {
     letter-spacing: 5px;
 
     margin: 10px 0 15px;
-
     text-align: center;
 }
 
@@ -597,7 +592,6 @@ html {
     letter-spacing: 1.5px;
 
     margin: 0 0 25px;
-
     text-align: center;
 }
 
@@ -608,7 +602,6 @@ html {
     line-height: 1.9;
 
     margin: 0 auto;
-
     text-align: center;
 }
 
@@ -616,7 +609,7 @@ html {
     width: 100%;
     display: block;
 
-    margin: 30px auto 0;
+    margin: 30px 0 0;
     padding: 0;
 
     text-align: center;
@@ -635,8 +628,6 @@ html {
 
     border: 1px solid #343c48;
     border-radius: 22px;
-
-    margin: 0 auto;
 }
 
 .round-link {
@@ -656,85 +647,16 @@ html {
 
     font-size: 18px;
 
-    margin: 25px auto 0;
+    margin-top: 25px;
 }
 
 .scroll-text {
-    display: inline-block;
-
     color: #aeb7c5;
 
     font-size: 8px;
     letter-spacing: 1.5px;
 
     margin-left: 10px;
-
-    text-align: center;
-}
-
-
-/* SMALL MOBILE */
-
-@media (max-width: 480px) {
-
-    .hero {
-        width: 90%;
-        padding-top: 120px;
-
-        text-align: center;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-        letter-spacing: 4px;
-        margin: 10px 0 12px;
-    }
-
-    .role {
-        font-size: 8px;
-        letter-spacing: 1px;
-        margin-bottom: 20px;
-    }
-
-    .description {
-        font-size: 11px;
-        line-height: 1.8;
-    }
-
-    .hero-picture {
-        margin-top: 25px;
-    }
-
-    .hero-picture img {
-        height: 200px;
-        border-radius: 18px;
-    }
-
-    .round-link {
-        margin-top: 20px;
-    }
-
-}
-
-
-/* EXTRA SMALL MOBILE */
-
-@media (max-width: 360px) {
-
-    .hero {
-        width: 92%;
-        padding-top: 115px;
-    }
-
-    .hero h1 {
-        font-size: 28px;
-        letter-spacing: 3px;
-    }
-
-    .hero-picture img {
-        height: 180px;
-    }
-
 }
 
 
