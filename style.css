@@ -472,10 +472,7 @@ h2 {
     color: #7f8998;
     font-size: 9px;
     letter-spacing: 1px;
-}
-
-.footer-links {
-    text-align: right;
+    text-align: center;
 }
 
 
@@ -487,59 +484,18 @@ html {
 }
 
 
-/* ============================= */
-/* RESPONSIVE: PC AND CELLPHONE */
-/* ============================= */
+/* MOBILE */
 
-
-/* PC */
-
-@media (min-width: 769px) {
-
-    .header {
-        display: table;
-    }
-
-    .hero {
-        width: 83%;
-        padding-top: 100px;
-    }
-
-    .hero-text {
-        width: 55%;
-    }
-
-    .hero-picture {
-        width: 45%;
-    }
-
-    .about-text,
-    .about-picture {
-        width: 50%;
-    }
-
-    .skill-card {
-        width: 25%;
-    }
-
-    .project-card,
-    .achievement-card {
-        width: 50%;
-    }
-
-}
-
-
-/* CELLPHONE */
 
 @media (max-width: 768px) {
 
     /* GENERAL */
 
     body {
+        width: 100%;
+        overflow-x: hidden;
         font-size: 12px;
     }
-
 
     /* NAVIGATION */
 
@@ -548,109 +504,238 @@ html {
         top: 0;
         left: 0;
 
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-
         width: 100%;
         margin: 0;
-        padding: 12px 5%;
+        padding: 12px 15px;
 
+        display: block;
         box-sizing: border-box;
-        background-color: #000;
+
+        background: #000;
         z-index: 1000;
     }
 
     .logo {
         width: 100%;
+        display: block;
+
+        text-align: center;
         font-size: 16px;
         letter-spacing: 3px;
-        margin-bottom: 10px;
+
+        margin-bottom: 15px;
     }
 
     .navigation {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-
         width: 100%;
-        gap: 8px;
 
-        text-align: left;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        gap: 12px;
+
+        text-align: center;
     }
 
     .navigation a {
-        display: block;
         margin: 0;
-        font-size: 10px;
+        font-size: 9px;
         letter-spacing: 1px;
     }
 
 
-    /* HOME */
+    
+/* HOME - MOBILE IMPROVEMENT */
+
+.hero {
+    width: 90%;
+    margin: 0 auto 60px;
+    padding-top: 125px;
+
+    display: block;
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+.hero-text {
+    width: 100%;
+    display: block;
+
+    padding: 0;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.eyebrow {
+    color: #9ba5b5;
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+
+    text-align: center;
+}
+
+.hero h1 {
+    color: #e5e9f0;
+
+    font-size: 38px;
+    letter-spacing: 5px;
+
+    margin: 10px 0 15px;
+
+    text-align: center;
+}
+
+.role {
+    color: #aeb7c5;
+
+    font-size: 9px;
+    letter-spacing: 1.5px;
+
+    margin: 0 0 25px;
+
+    text-align: center;
+}
+
+.description {
+    color: #c1c7d0;
+
+    font-size: 12px;
+    line-height: 1.9;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.hero-picture {
+    width: 100%;
+    display: block;
+
+    margin: 30px auto 0;
+    padding: 0;
+
+    text-align: center;
+}
+
+.hero-picture img {
+    display: block;
+
+    width: 100%;
+    height: 230px;
+
+    object-fit: cover;
+    object-position: center;
+
+    box-sizing: border-box;
+
+    border: 1px solid #343c48;
+    border-radius: 22px;
+
+    margin: 0 auto;
+}
+
+.round-link {
+    display: inline-block;
+
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+
+    text-align: center;
+
+    border: 1px solid #687383;
+    border-radius: 50%;
+
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 18px;
+
+    margin: 25px auto 0;
+}
+
+.scroll-text {
+    display: inline-block;
+
+    color: #aeb7c5;
+
+    font-size: 8px;
+    letter-spacing: 1.5px;
+
+    margin-left: 10px;
+
+    text-align: center;
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
 
     .hero {
         width: 90%;
-        margin: 0 auto 60px;
-        padding-top: 180px;
-        border-spacing: 0;
-    }
+        padding-top: 120px;
 
-    .hero-text {
-        width: 100%;
-        display: block;
-        padding-bottom: 25px;
-    }
-
-    .eyebrow {
-        font-size: 8px;
-        letter-spacing: 2px;
+        text-align: center;
     }
 
     .hero h1 {
-        font-size: 42px;
-        letter-spacing: 5px;
-        margin: 10px 0;
+        font-size: 32px;
+        letter-spacing: 4px;
+        margin: 10px 0 12px;
     }
 
     .role {
         font-size: 8px;
-        letter-spacing: 1.5px;
-        margin: 8px 0 20px;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
     }
 
     .description {
-        font-size: 12px;
-        line-height: 1.9;
+        font-size: 11px;
+        line-height: 1.8;
     }
 
     .hero-picture {
-        width: 100%;
-        display: block;
-        text-align: left;
+        margin-top: 25px;
     }
 
     .hero-picture img {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-        object-position: center;
-        border-radius: 20px;
+        height: 200px;
+        border-radius: 18px;
     }
 
     .round-link {
-        width: 35px;
-        height: 35px;
-        line-height: 35px;
-        font-size: 18px;
-        margin-top: 15px;
+        margin-top: 20px;
     }
 
-    .scroll-text {
-        font-size: 8px;
-        letter-spacing: 1.5px;
-        margin-left: 8px;
+}
+
+
+/* EXTRA SMALL MOBILE */
+
+@media (max-width: 360px) {
+
+    .hero {
+        width: 92%;
+        padding-top: 115px;
     }
+
+    .hero h1 {
+        font-size: 28px;
+        letter-spacing: 3px;
+    }
+
+    .hero-picture img {
+        height: 180px;
+    }
+
+}
 
 
     /* PANELS */
@@ -658,17 +743,21 @@ html {
     .panel {
         width: 90%;
         margin: 0 auto 45px;
+
         padding: 22px;
+
         box-sizing: border-box;
 
         border-radius: 20px;
-        border-spacing: 10px;
+        border-spacing: 0;
     }
 
     h2 {
         font-size: 23px;
         letter-spacing: 3px;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
+
+        text-align: center;
     }
 
 
@@ -677,20 +766,15 @@ html {
     .about-text,
     .about-picture {
         width: 100%;
-        display: block;
         float: none;
+        display: block;
     }
 
     .about-text {
         padding: 0;
         margin-bottom: 25px;
-    }
 
-    .about-picture img {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-        border-radius: 15px;
+        text-align: center;
     }
 
     .about-text p {
@@ -698,41 +782,88 @@ html {
         line-height: 1.9;
     }
 
+    .about-picture img {
+        width: 100%;
+        height: 230px;
+
+        object-fit: cover;
+        object-position: center;
+
+        border-radius: 15px;
+    }
+
+    .outline-link {
+        font-size: 10px;
+        padding: 10px 20px;
+    }
+
 
     /* SKILLS */
 
     .section {
         width: 90%;
-        margin: 0 auto 50px;
+        margin: 0 auto 55px;
     }
 
     .card-table {
         width: 100%;
+
+        display: block;
         margin: 0;
-        border-spacing: 8px;
+
+        border-spacing: 0;
+        border-collapse: separate;
+    }
+
+    .card-table tbody {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+    .card-table tr {
+        display: contents;
     }
 
     .skill-card {
-        width: 50%;
-        height: 145px;
-        padding: 12px;
+        width: 100%;
+        height: 155px;
+
+        display: block;
+        padding: 15px;
+
         box-sizing: border-box;
+
+        vertical-align: initial;
+        text-align: center;
+
+        border-radius: 15px;
     }
 
     .skill-icon {
-        font-size: 22px;
+        font-size: 23px;
         margin-bottom: 20px;
     }
 
     .skill-card p {
-        font-size: 10px;
+        font-size: 11px;
+        margin: 10px 0;
     }
 
     .skill-card span {
-        font-size: 10px;
+        float: none;
+        display: inline;
+        margin-left: 5px;
     }
 
-    .bar,
+    .bar {
+        width: 100%;
+        height: 4px;
+    }
+
     .python-bar,
     .html-bar,
     .css-bar,
@@ -745,7 +876,24 @@ html {
 
     .projects {
         width: 100%;
-        border-spacing: 8px;
+
+        display: block;
+
+        border-spacing: 0;
+        border-collapse: separate;
+    }
+
+    .projects tbody {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+    .projects tr {
+        display: contents;
     }
 
     .projects h2 {
@@ -756,23 +904,37 @@ html {
     .featured {
         font-size: 8px;
         letter-spacing: 1px;
+        text-align: center;
     }
 
     .project-card {
-        width: 50%;
-        padding: 10px;
+        width: 100%;
+        height: auto;
+
+        display: block;
+        padding: 12px;
+
         box-sizing: border-box;
+        vertical-align: initial;
+
+        text-align: center;
+
+        border-radius: 15px;
     }
 
     .project-card img {
         width: 100%;
-        height: 130px;
+        height: 125px;
+
         object-fit: cover;
+        object-position: center;
+
         border-radius: 10px;
     }
 
     .project-card h3 {
-        font-size: 13px;
+        font-size: 12px;
+        line-height: 1.5;
     }
 
     .project-card p {
@@ -783,6 +945,7 @@ html {
     .tags {
         font-size: 9px;
         letter-spacing: 0.5px;
+        margin-top: 12px;
     }
 
 
@@ -790,20 +953,40 @@ html {
 
     .achievements {
         width: 100%;
-        border-spacing: 8px;
+
+        display: block;
+
+        border-spacing: 0;
+        border-collapse: separate;
+    }
+
+    .achievements tbody {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+    .achievements tr {
+        display: contents;
     }
 
     .achievement-card {
-        width: 50%;
+        width: 100%;
         height: auto;
-        min-height: 160px;
-        padding: 12px;
-        box-sizing: border-box;
-        vertical-align: top;
+        min-height: 175px;
 
-        border: 1px solid #242b36;
-        border-radius: 12px;
-        background-color: #070a0e;
+        display: block;
+        padding: 12px;
+
+        box-sizing: border-box;
+        vertical-align: initial;
+
+        text-align: center;
+
+        border-radius: 15px;
     }
 
     .achievement-icon {
@@ -812,6 +995,7 @@ html {
 
     .achievement-card h3 {
         font-size: 12px;
+        line-height: 1.5;
     }
 
     .achievement-card p {
@@ -828,20 +1012,38 @@ html {
 
     .contact {
         width: 100%;
+
+        display: block;
+
         border-spacing: 0;
+        border-collapse: separate;
+    }
+
+    .contact tbody {
+        width: 100%;
+        display: block;
+    }
+
+    .contact tr {
+        display: block;
+        width: 100%;
     }
 
     .contact-details,
     .contact-fields {
         width: 100%;
+
         display: block;
         box-sizing: border-box;
     }
 
     .contact-details {
         padding: 0 0 20px;
+
         border-right: none;
         border-bottom: 1px solid #252d38;
+
+        text-align: center;
     }
 
     .contact-details p {
@@ -851,12 +1053,16 @@ html {
 
     .contact-fields {
         padding-top: 20px;
+        text-align: center;
     }
 
     .contact-fields input,
     .contact-fields textarea {
         width: 100%;
+
         padding: 12px;
+        margin-bottom: 12px;
+
         box-sizing: border-box;
         font-size: 11px;
     }
@@ -872,841 +1078,17 @@ html {
     .footer {
         width: 90%;
         margin: 0 auto;
-        padding-bottom: 20px;
-        font-size: 8px;
-        letter-spacing: 0.5px;
-    }
 
-    .footer-links {
-        text-align: left;
-    }
-
-}
-
-
-/* SMALL CELLPHONES */
-
-@media (max-width: 480px) {
-
-    .header {
-        padding: 10px 5%;
-    }
-
-    .logo {
-        font-size: 14px;
-        letter-spacing: 2px;
-    }
-
-    .navigation {
-        gap: 6px;
-    }
-
-    .navigation a {
-        font-size: 9px;
-    }
-
-    .hero {
-        width: 92%;
-        padding-top: 170px;
-    }
-
-    .hero h1 {
-        font-size: 34px;
-        letter-spacing: 4px;
-    }
-
-    .hero-picture img {
-        height: 210px;
-    }
-
-    .panel {
-        width: 92%;
-        padding: 16px;
-        border-radius: 15px;
-    }
-
-    .section {
-        width: 92%;
-    }
-
-    .skill-card {
-        height: 130px;
-        padding: 10px;
-    }
-
-    .skill-icon {
-        font-size: 20px;
-        margin-bottom: 15px;
-    }
-
-    .project-card {
-        padding: 8px;
-    }
-
-    .project-card img {
-        height: 100px;
-    }
-
-    .project-card h3 {
-        font-size: 11px;
-    }
-
-    .project-card p {
-        font-size: 9px;
-    }
-
-    .achievement-card {
-        padding: 10px;
-        min-height: 145px;
-    }
-
-    .achievement-card h3 {
-        font-size: 11px;
-    }
-
-    .achievement-card p {
-        font-size: 9px;
-    }
-
-    .achievement-card small {
-        font-size: 7px;
-    }
-
-}
-
-
-/* SMOOTH SCROLL */
-
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 180px;
-}
-
-
-/* ================================= */
-/* COMPLETE MOBILE RESPONSIVE LAYOUT */
-/* ================================= */
-
-@media (max-width: 768px) {
-
-    /* GENERAL */
-
-    html {
-        scroll-padding-top: 100px;
-    }
-
-    body {
-        font-size: 12px;
-        overflow-x: hidden;
-    }
-
-    img {
-        max-width: 100%;
-    }
-
-
-    /* NAVIGATION */
-
-    .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-
-        width: 100%;
-        margin: 0;
-        padding: 12px 5%;
-
-        box-sizing: border-box;
-        background: #000;
-        border-spacing: 0;
-        z-index: 1000;
-    }
-
-    .logo {
-        width: auto;
-        font-size: 16px;
-        letter-spacing: 3px;
-        margin: 0;
-    }
-
-    .navigation {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        align-items: center;
-
-        width: auto;
-        gap: 8px 14px;
-
-        text-align: right;
-    }
-
-    .navigation a {
-        margin: 0;
-        font-size: 9px;
-        letter-spacing: 0.5px;
-    }
-
-
-    /* HOME */
-
-    .hero {
-        display: block;
-
-        width: 90%;
-        margin: 0 auto 65px;
-        padding-top: 135px;
-
-        border-spacing: 0;
-    }
-
-    .hero tbody,
-    .hero tr {
-        display: block;
-        width: 100%;
-    }
-
-    .hero-text,
-    .hero-picture {
-        display: block;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .hero-text {
-        padding-bottom: 25px;
-    }
-
-    .hero h1 {
-        font-size: clamp(38px, 10vw, 58px);
-        letter-spacing: 5px;
-        overflow-wrap: anywhere;
-    }
-
-    .eyebrow {
-        font-size: 8px;
-        letter-spacing: 2px;
-    }
-
-    .role {
-        font-size: 8px;
-        letter-spacing: 1.5px;
-        line-height: 1.8;
-        margin-bottom: 20px;
-    }
-
-    .description {
-        font-size: 12px;
-        line-height: 1.9;
-    }
-
-    .hero-picture {
-        text-align: left;
-    }
-
-    .hero-picture img {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1.15;
-        object-fit: cover;
-        border-radius: 20px;
-    }
-
-    .round-link {
-        width: 36px;
-        height: 36px;
-        line-height: 36px;
-        font-size: 18px;
-        margin-top: 15px;
-    }
-
-    .scroll-text {
-        font-size: 8px;
-        letter-spacing: 1px;
-        margin-left: 8px;
-    }
-
-
-    /* PANELS */
-
-    .panel {
-        width: 90%;
-        margin: 0 auto 45px;
-        padding: 22px;
-
-        border-radius: 20px;
-        border-spacing: 0;
-
-        box-sizing: border-box;
-    }
-
-    h2 {
-        font-size: 23px;
-        letter-spacing: 3px;
-        line-height: 1.4;
-    }
-
-
-    /* ABOUT */
-
-    .about-text,
-    .about-picture {
-        display: block;
-        float: none;
-
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .about-picture {
-        margin-bottom: 22px;
-    }
-
-    .about-picture img {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1.25;
-        object-fit: cover;
-        border-radius: 15px;
-    }
-
-    .about-text {
-        padding: 0;
-        margin: 0;
-    }
-
-    .about-text p {
-        font-size: 12px;
-        line-height: 1.9;
-    }
-
-    .outline-link {
-        font-size: 10px;
-        padding: 10px 18px;
-    }
-
-
-    /* SKILLS */
-
-    .section.skills {
-        width: 90%;
-        margin: 0 auto 60px;
-    }
-
-    .skills .eyebrow {
-        line-height: 1.8;
-        margin-bottom: 20px;
-    }
-
-    .skills .card-table {
-        display: block;
-
-        width: 100%;
-        margin: 0;
-        border-spacing: 0;
-        table-layout: fixed;
-    }
-
-    .skills .card-table tbody {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-
-        width: 100%;
-    }
-
-    .skills .card-table tr {
-        display: contents;
-    }
-
-    .skills .skill-card {
-        display: block;
-
-        width: 100%;
-        height: 155px;
-        padding: 0;
-
-        box-sizing: border-box;
-        vertical-align: top;
-    }
-
-    .skills .skill-card-front,
-    .skills .skill-card-back {
-        padding: 12px;
-        border-radius: 13px;
-    }
-
-    .skills .skill-card-front .skill-icon {
-        font-size: 22px;
-        margin-bottom: 18px;
-    }
-
-    .skills .skill-card-front p {
-        font-size: 10px;
-        margin: 0;
-    }
-
-    .skills .skill-card-back h3 {
-        font-size: 12px;
-        margin-bottom: 6px;
-    }
-
-    .skills .skill-card-back p {
-        font-size: 9px;
-        line-height: 1.5;
-        margin-bottom: 7px;
-    }
-
-    .skills .skill-card-back span {
-        font-size: 9px;
-        margin-bottom: 5px;
-    }
-
-    .skills .skill-card-back .bar,
-    .skills .python-bar,
-    .skills .html-bar,
-    .skills .css-bar,
-    .skills .design-bar {
-        height: 4px;
-    }
-
-
-    /* PROJECTS */
-
-    .projects {
-        display: block;
-        width: 100%;
-        border-spacing: 0;
-    }
-
-    .projects tbody {
-        display: block;
-        width: 100%;
-    }
-
-    .projects tr {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr);
-        gap: 14px;
-
-        width: 100%;
-    }
-
-    .projects td {
-        box-sizing: border-box;
-    }
-
-    .projects h2 {
-        font-size: 22px;
-        margin-bottom: 10px;
-    }
-
-    .featured {
-        display: block;
-        text-align: left;
-        font-size: 8px;
-        letter-spacing: 1px;
-        margin-bottom: 15px;
-    }
-
-    .project-card {
-        display: block;
-
-        width: 100%;
-        padding: 12px;
-
-        box-sizing: border-box;
-        vertical-align: top;
-
-        border-radius: 14px;
-    }
-
-    .project-card img {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1.5;
-        object-fit: cover;
-        border-radius: 10px;
-    }
-
-    .project-card h3 {
-        font-size: 13px;
-        line-height: 1.5;
-    }
-
-    .project-card p {
-        font-size: 10px;
-        line-height: 1.8;
-        overflow-wrap: anywhere;
-    }
-
-    .tags {
-        font-size: 9px;
-        line-height: 1.8;
-        letter-spacing: 0.5px;
-        overflow-wrap: anywhere;
-    }
-
-
-    /* ACHIEVEMENTS */
-
-    .achievements {
-        display: block;
-        width: 100%;
-        border-spacing: 0;
-    }
-
-    .achievements tbody {
-        display: block;
-        width: 100%;
-    }
-
-    .achievements tr {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-
-        width: 100%;
-    }
-
-    .achievement-card {
-        display: block;
-
-        width: 100%;
-        height: auto;
-        min-height: 155px;
-        padding: 13px;
-
-        box-sizing: border-box;
-        vertical-align: top;
-
-        border-radius: 13px;
-    }
-
-    .achievement-icon {
-        font-size: 21px;
-    }
-
-    .achievement-card h3 {
-        font-size: 12px;
-        line-height: 1.5;
-    }
-
-    .achievement-card p {
-        font-size: 10px;
-        line-height: 1.7;
-        overflow-wrap: anywhere;
-    }
-
-    .achievement-card small {
-        font-size: 8px;
-    }
-
-
-    /* CONTACT */
-
-    .contact {
-        display: block;
-        width: 100%;
-        border-spacing: 0;
-    }
-
-    .contact tbody {
-        display: block;
-        width: 100%;
-    }
-
-    .contact tr {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .contact-details,
-    .contact-fields {
-        display: block;
-
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .contact-details {
-        padding: 0 0 20px;
-
-        border-right: none;
-        border-bottom: 1px solid #252d38;
-    }
-
-    .contact-details p {
-        font-size: 11px;
-        line-height: 1.8;
-        margin-top: 15px;
-        overflow-wrap: anywhere;
-    }
-
-    .contact-fields {
-        padding-top: 22px;
-    }
-
-    .contact-fields input,
-    .contact-fields textarea {
-        display: block;
-
-        width: 100%;
-        max-width: 100%;
-        padding: 12px;
-        margin-bottom: 12px;
-
-        box-sizing: border-box;
-        font-size: 11px;
-    }
-
-    .contact-fields textarea {
-        min-height: 120px;
-        resize: vertical;
-    }
-
-    .contact-fields button {
-        font-size: 10px;
-        padding: 10px 18px;
-    }
-
-
-    /* FOOTER */
-
-    .footer {
-        width: 90%;
-        margin: 0 auto;
         padding-bottom: 20px;
 
         font-size: 8px;
-        line-height: 1.8;
         letter-spacing: 0.5px;
+
+        text-align: center;
     }
 
     .footer-links {
-        text-align: left;
-    }
-
-}
-
-
-/* ================================= */
-/* SMALL PHONES */
-/* ================================= */
-
-@media (max-width: 480px) {
-
-    /* NAVIGATION */
-
-    .header {
-        padding: 10px 4%;
-    }
-
-    .logo {
-        font-size: 14px;
-        letter-spacing: 2px;
-    }
-
-    .navigation {
-        gap: 7px 10px;
-    }
-
-    .navigation a {
-        font-size: 8px;
-        letter-spacing: 0.3px;
-    }
-
-
-    /* HOME */
-
-    .hero {
-        width: 92%;
-        padding-top: 125px;
-        margin-bottom: 50px;
-    }
-
-    .hero h1 {
-        font-size: clamp(32px, 9vw, 42px);
-        letter-spacing: 3px;
-    }
-
-    .hero-picture img {
-        aspect-ratio: 1.1;
-    }
-
-
-    /* PANELS */
-
-    .panel {
-        width: 92%;
-        padding: 16px;
-        margin-bottom: 35px;
-        border-radius: 15px;
-    }
-
-    h2 {
-        font-size: 20px;
-        letter-spacing: 2px;
-    }
-
-
-    /* ABOUT */
-
-    .about-picture img {
-        aspect-ratio: 1.15;
-    }
-
-
-    /* SKILLS */
-
-    .section.skills {
-        width: 92%;
-    }
-
-    .skills .card-table tbody {
-        gap: 10px;
-    }
-
-    .skills .skill-card {
-        height: 145px;
-    }
-
-    .skills .skill-card-front,
-    .skills .skill-card-back {
-        padding: 10px;
-    }
-
-    .skills .skill-card-front .skill-icon {
-        font-size: 20px;
-        margin-bottom: 15px;
-    }
-
-    .skills .skill-card-front p {
-        font-size: 9px;
-    }
-
-    .skills .skill-card-back h3 {
-        font-size: 11px;
-    }
-
-    .skills .skill-card-back p {
-        font-size: 8px;
-        line-height: 1.45;
-    }
-
-
-    /* PROJECTS */
-
-    .project-card {
-        padding: 10px;
-    }
-
-    .project-card img {
-        aspect-ratio: 1.3;
-    }
-
-    .project-card h3 {
-        font-size: 12px;
-    }
-
-    .project-card p {
-        font-size: 9px;
-    }
-
-
-    /* ACHIEVEMENTS */
-
-    .achievements tr {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 10px;
-    }
-
-    .achievement-card {
-        min-height: 0;
-        padding: 14px;
-    }
-
-    .achievement-card h3 {
-        font-size: 12px;
-    }
-
-    .achievement-card p {
-        font-size: 9px;
-    }
-
-    .achievement-card small {
-        font-size: 8px;
-    }
-
-
-    /* CONTACT */
-
-    .contact-details p {
-        font-size: 10px;
-    }
-
-    .contact-fields input,
-    .contact-fields textarea {
-        font-size: 10px;
-    }
-
-}
-
-
-/* ================================= */
-/* EXTRA SMALL PHONES */
-/* ================================= */
-
-@media (max-width: 360px) {
-
-    .navigation {
-        gap: 6px 8px;
-    }
-
-    .navigation a {
-        font-size: 7px;
-    }
-
-    .hero h1 {
-        letter-spacing: 2px;
-    }
-
-    .skills .card-table tbody {
-        gap: 8px;
-    }
-
-    .skills .skill-card {
-        height: 140px;
-    }
-
-    .skills .skill-card-front,
-    .skills .skill-card-back {
-        padding: 8px;
-    }
-
-    .skills .skill-card-front .skill-icon {
-        font-size: 18px;
-        margin-bottom: 12px;
-    }
-
-    .skills .skill-card-front p {
-        font-size: 8px;
-    }
-
-    .skills .skill-card-back h3 {
-        font-size: 10px;
-    }
-
-    .skills .skill-card-back p {
-        font-size: 7px;
+        text-align: center;
     }
 
 }
