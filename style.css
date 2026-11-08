@@ -7,7 +7,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 100px;
+    scroll-padding-top: 110px;
 }
 
 body {
@@ -33,7 +33,6 @@ body {
     margin: 0 0 100px 50px;
     border-spacing: 0;
     background: #000;
-    box-sizing: border-box;
 }
 
 .logo {
@@ -74,7 +73,6 @@ body {
     margin: 0 auto 100px;
     padding-top: 100px;
     border-spacing: 0;
-    box-sizing: border-box;
 }
 
 .hero-text {
@@ -154,6 +152,7 @@ body {
     margin-left: 12px;
 }
 
+
 /* panel */
 
 .panel {
@@ -174,8 +173,8 @@ h2 {
     margin: 0 0 10px;
 }
 
-/* about */
 
+/* about */
 
 .about-text {
     width: 50%;
@@ -309,13 +308,13 @@ h2 {
 /* projects */
 
 .projects {
+    width: 100%;
     border-spacing: 15px;
 }
 
 .projects h2 {
     margin-bottom: 15px;
 }
-
 
 .project-card {
     width: 50%;
@@ -324,6 +323,12 @@ h2 {
     border: 1px solid #242b36;
     border-radius: 15px;
     background-color: #06090d;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: #566273;
+    transform: translateY(-4px);
 }
 
 .project-card img {
@@ -473,6 +478,7 @@ h2 {
     text-align: center;
 }
 
+
 /* tablet responsive */
 
 @media screen and (max-width: 1024px) {
@@ -511,7 +517,7 @@ h2 {
         font-size: 12px;
     }
 
- /* navigation */
+    /* navigation */
 
     .header {
         position: fixed !important;
@@ -528,10 +534,7 @@ h2 {
         z-index: 1000;
     }
 
-    .header tbody {
-        width: 100%;
-    }
-
+    .header tbody,
     .header tr {
         width: 100%;
     }
@@ -572,7 +575,7 @@ h2 {
     }
 
 
-   /* home */
+    /* home */
 
     .hero {
         width: 90%;
@@ -701,7 +704,7 @@ h2 {
     }
 
 
-  /* skills */
+    /* skills */
 
     .section {
         width: 90%;
@@ -759,64 +762,90 @@ h2 {
     }
 
 
-/* projects */
+    /* projects */
 
     .projects {
         width: 100%;
         display: block;
         border-spacing: 0;
+        table-layout: auto;
     }
 
     .projects tbody {
         width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
+        display: block;
     }
 
     .projects tr {
-        display: contents;
+        display: block;
+        width: 100%;
+    }
+
+    .projects td {
+        display: block;
+        width: 100% !important;
+        padding: 0;
     }
 
     .projects h2 {
-        font-size: 22px;
-        margin-bottom: 10px;
+        display: block;
+        width: 100%;
+        font-size: 23px;
+        letter-spacing: 3px;
+        text-align: center;
+        margin: 0 0 22px;
     }
 
-
     .project-card {
-        width: 100%;
         display: block;
-        padding: 12px;
+        width: 100% !important;
+        max-width: 520px;
+        height: auto;
+        margin: 0 auto 20px;
+        padding: 18px;
         text-align: center;
-        border-radius: 15px;
+        border-radius: 18px;
+        box-sizing: border-box;
+    }
+
+    .project-card:hover {
+        transform: none;
     }
 
     .project-card img {
+        display: block;
         width: 100%;
-        height: 125px;
+        height: 190px;
         object-fit: cover;
-        border-radius: 10px;
+        border-radius: 12px;
     }
 
     .project-card h3 {
-        font-size: 12px;
+        font-size: 15px;
         line-height: 1.5;
+        margin: 17px 0 10px;
     }
 
     .project-card p {
-        font-size: 10px;
-        line-height: 1.7;
+        font-size: 12px;
+        line-height: 1.9;
+        margin: 10px 0;
+    }
+
+    .project-card .outline-link {
+        margin-top: 15px;
     }
 
     .tags {
-        font-size: 9px;
-        letter-spacing: 0.5px;
-        margin-top: 12px;
+        color: #b4bdc9;
+        font-size: 10px;
+        letter-spacing: 0.7px;
+        line-height: 2;
+        margin-top: 15px;
     }
 
 
- /* achievements */
+    /* achievements */
 
     .achievements {
         width: 100%;
@@ -890,7 +919,7 @@ h2 {
     }
 
 
-/* contact */
+    /* contact */
 
     .contact {
         width: 100%;
@@ -941,7 +970,7 @@ h2 {
     }
 
 
-  /* footer */
+    /* footer */
 
     .footer {
         width: 90%;
@@ -1025,19 +1054,22 @@ h2 {
     }
 
     .project-card {
-        padding: 9px;
+        width: 100% !important;
+        max-width: 100%;
+        padding: 14px;
+        margin-bottom: 16px;
     }
 
     .project-card img {
-        height: 105px;
+        height: 165px;
     }
 
     .project-card h3 {
-        font-size: 11px;
+        font-size: 14px;
     }
 
     .project-card p {
-        font-size: 9px;
+        font-size: 11px;
     }
 
     .achievements h2 {
@@ -1094,6 +1126,14 @@ h2 {
 
     .hero-picture img {
         height: 215px;
+    }
+
+    .project-card {
+        padding: 12px;
+    }
+
+    .project-card img {
+        height: 145px;
     }
 
     .achievement-card {
