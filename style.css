@@ -981,3 +981,732 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 180px;
 }
+
+
+/* ================================= */
+/* COMPLETE MOBILE RESPONSIVE LAYOUT */
+/* ================================= */
+
+@media (max-width: 768px) {
+
+    /* GENERAL */
+
+    html {
+        scroll-padding-top: 100px;
+    }
+
+    body {
+        font-size: 12px;
+        overflow-x: hidden;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+
+    /* NAVIGATION */
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+        margin: 0;
+        padding: 12px 5%;
+
+        box-sizing: border-box;
+        background: #000;
+        border-spacing: 0;
+        z-index: 1000;
+    }
+
+    .logo {
+        width: auto;
+        font-size: 16px;
+        letter-spacing: 3px;
+        margin: 0;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+
+        width: auto;
+        gap: 8px 14px;
+
+        text-align: right;
+    }
+
+    .navigation a {
+        margin: 0;
+        font-size: 9px;
+        letter-spacing: 0.5px;
+    }
+
+
+    /* HOME */
+
+    .hero {
+        display: block;
+
+        width: 90%;
+        margin: 0 auto 65px;
+        padding-top: 135px;
+
+        border-spacing: 0;
+    }
+
+    .hero tbody,
+    .hero tr {
+        display: block;
+        width: 100%;
+    }
+
+    .hero-text,
+    .hero-picture {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hero-text {
+        padding-bottom: 25px;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 10vw, 58px);
+        letter-spacing: 5px;
+        overflow-wrap: anywhere;
+    }
+
+    .eyebrow {
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+    .role {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    .description {
+        font-size: 12px;
+        line-height: 1.9;
+    }
+
+    .hero-picture {
+        text-align: left;
+    }
+
+    .hero-picture img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1.15;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    .round-link {
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 18px;
+        margin-top: 15px;
+    }
+
+    .scroll-text {
+        font-size: 8px;
+        letter-spacing: 1px;
+        margin-left: 8px;
+    }
+
+
+    /* PANELS */
+
+    .panel {
+        width: 90%;
+        margin: 0 auto 45px;
+        padding: 22px;
+
+        border-radius: 20px;
+        border-spacing: 0;
+
+        box-sizing: border-box;
+    }
+
+    h2 {
+        font-size: 23px;
+        letter-spacing: 3px;
+        line-height: 1.4;
+    }
+
+
+    /* ABOUT */
+
+    .about-text,
+    .about-picture {
+        display: block;
+        float: none;
+
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .about-picture {
+        margin-bottom: 22px;
+    }
+
+    .about-picture img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1.25;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    .about-text {
+        padding: 0;
+        margin: 0;
+    }
+
+    .about-text p {
+        font-size: 12px;
+        line-height: 1.9;
+    }
+
+    .outline-link {
+        font-size: 10px;
+        padding: 10px 18px;
+    }
+
+
+    /* SKILLS */
+
+    .section.skills {
+        width: 90%;
+        margin: 0 auto 60px;
+    }
+
+    .skills .eyebrow {
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    .skills .card-table {
+        display: block;
+
+        width: 100%;
+        margin: 0;
+        border-spacing: 0;
+        table-layout: fixed;
+    }
+
+    .skills .card-table tbody {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+
+        width: 100%;
+    }
+
+    .skills .card-table tr {
+        display: contents;
+    }
+
+    .skills .skill-card {
+        display: block;
+
+        width: 100%;
+        height: 155px;
+        padding: 0;
+
+        box-sizing: border-box;
+        vertical-align: top;
+    }
+
+    .skills .skill-card-front,
+    .skills .skill-card-back {
+        padding: 12px;
+        border-radius: 13px;
+    }
+
+    .skills .skill-card-front .skill-icon {
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+
+    .skills .skill-card-front p {
+        font-size: 10px;
+        margin: 0;
+    }
+
+    .skills .skill-card-back h3 {
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+
+    .skills .skill-card-back p {
+        font-size: 9px;
+        line-height: 1.5;
+        margin-bottom: 7px;
+    }
+
+    .skills .skill-card-back span {
+        font-size: 9px;
+        margin-bottom: 5px;
+    }
+
+    .skills .skill-card-back .bar,
+    .skills .python-bar,
+    .skills .html-bar,
+    .skills .css-bar,
+    .skills .design-bar {
+        height: 4px;
+    }
+
+
+    /* PROJECTS */
+
+    .projects {
+        display: block;
+        width: 100%;
+        border-spacing: 0;
+    }
+
+    .projects tbody {
+        display: block;
+        width: 100%;
+    }
+
+    .projects tr {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+
+        width: 100%;
+    }
+
+    .projects td {
+        box-sizing: border-box;
+    }
+
+    .projects h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .featured {
+        display: block;
+        text-align: left;
+        font-size: 8px;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+    }
+
+    .project-card {
+        display: block;
+
+        width: 100%;
+        padding: 12px;
+
+        box-sizing: border-box;
+        vertical-align: top;
+
+        border-radius: 14px;
+    }
+
+    .project-card img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1.5;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .project-card h3 {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .project-card p {
+        font-size: 10px;
+        line-height: 1.8;
+        overflow-wrap: anywhere;
+    }
+
+    .tags {
+        font-size: 9px;
+        line-height: 1.8;
+        letter-spacing: 0.5px;
+        overflow-wrap: anywhere;
+    }
+
+
+    /* ACHIEVEMENTS */
+
+    .achievements {
+        display: block;
+        width: 100%;
+        border-spacing: 0;
+    }
+
+    .achievements tbody {
+        display: block;
+        width: 100%;
+    }
+
+    .achievements tr {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+
+        width: 100%;
+    }
+
+    .achievement-card {
+        display: block;
+
+        width: 100%;
+        height: auto;
+        min-height: 155px;
+        padding: 13px;
+
+        box-sizing: border-box;
+        vertical-align: top;
+
+        border-radius: 13px;
+    }
+
+    .achievement-icon {
+        font-size: 21px;
+    }
+
+    .achievement-card h3 {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .achievement-card p {
+        font-size: 10px;
+        line-height: 1.7;
+        overflow-wrap: anywhere;
+    }
+
+    .achievement-card small {
+        font-size: 8px;
+    }
+
+
+    /* CONTACT */
+
+    .contact {
+        display: block;
+        width: 100%;
+        border-spacing: 0;
+    }
+
+    .contact tbody {
+        display: block;
+        width: 100%;
+    }
+
+    .contact tr {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contact-details,
+    .contact-fields {
+        display: block;
+
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contact-details {
+        padding: 0 0 20px;
+
+        border-right: none;
+        border-bottom: 1px solid #252d38;
+    }
+
+    .contact-details p {
+        font-size: 11px;
+        line-height: 1.8;
+        margin-top: 15px;
+        overflow-wrap: anywhere;
+    }
+
+    .contact-fields {
+        padding-top: 22px;
+    }
+
+    .contact-fields input,
+    .contact-fields textarea {
+        display: block;
+
+        width: 100%;
+        max-width: 100%;
+        padding: 12px;
+        margin-bottom: 12px;
+
+        box-sizing: border-box;
+        font-size: 11px;
+    }
+
+    .contact-fields textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    .contact-fields button {
+        font-size: 10px;
+        padding: 10px 18px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 20px;
+
+        font-size: 8px;
+        line-height: 1.8;
+        letter-spacing: 0.5px;
+    }
+
+    .footer-links {
+        text-align: left;
+    }
+
+}
+
+
+/* ================================= */
+/* SMALL PHONES */
+/* ================================= */
+
+@media (max-width: 480px) {
+
+    /* NAVIGATION */
+
+    .header {
+        padding: 10px 4%;
+    }
+
+    .logo {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .navigation {
+        gap: 7px 10px;
+    }
+
+    .navigation a {
+        font-size: 8px;
+        letter-spacing: 0.3px;
+    }
+
+
+    /* HOME */
+
+    .hero {
+        width: 92%;
+        padding-top: 125px;
+        margin-bottom: 50px;
+    }
+
+    .hero h1 {
+        font-size: clamp(32px, 9vw, 42px);
+        letter-spacing: 3px;
+    }
+
+    .hero-picture img {
+        aspect-ratio: 1.1;
+    }
+
+
+    /* PANELS */
+
+    .panel {
+        width: 92%;
+        padding: 16px;
+        margin-bottom: 35px;
+        border-radius: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+
+    /* ABOUT */
+
+    .about-picture img {
+        aspect-ratio: 1.15;
+    }
+
+
+    /* SKILLS */
+
+    .section.skills {
+        width: 92%;
+    }
+
+    .skills .card-table tbody {
+        gap: 10px;
+    }
+
+    .skills .skill-card {
+        height: 145px;
+    }
+
+    .skills .skill-card-front,
+    .skills .skill-card-back {
+        padding: 10px;
+    }
+
+    .skills .skill-card-front .skill-icon {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .skills .skill-card-front p {
+        font-size: 9px;
+    }
+
+    .skills .skill-card-back h3 {
+        font-size: 11px;
+    }
+
+    .skills .skill-card-back p {
+        font-size: 8px;
+        line-height: 1.45;
+    }
+
+
+    /* PROJECTS */
+
+    .project-card {
+        padding: 10px;
+    }
+
+    .project-card img {
+        aspect-ratio: 1.3;
+    }
+
+    .project-card h3 {
+        font-size: 12px;
+    }
+
+    .project-card p {
+        font-size: 9px;
+    }
+
+
+    /* ACHIEVEMENTS */
+
+    .achievements tr {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .achievement-card {
+        min-height: 0;
+        padding: 14px;
+    }
+
+    .achievement-card h3 {
+        font-size: 12px;
+    }
+
+    .achievement-card p {
+        font-size: 9px;
+    }
+
+    .achievement-card small {
+        font-size: 8px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-details p {
+        font-size: 10px;
+    }
+
+    .contact-fields input,
+    .contact-fields textarea {
+        font-size: 10px;
+    }
+
+}
+
+
+/* ================================= */
+/* EXTRA SMALL PHONES */
+/* ================================= */
+
+@media (max-width: 360px) {
+
+    .navigation {
+        gap: 6px 8px;
+    }
+
+    .navigation a {
+        font-size: 7px;
+    }
+
+    .hero h1 {
+        letter-spacing: 2px;
+    }
+
+    .skills .card-table tbody {
+        gap: 8px;
+    }
+
+    .skills .skill-card {
+        height: 140px;
+    }
+
+    .skills .skill-card-front,
+    .skills .skill-card-back {
+        padding: 8px;
+    }
+
+    .skills .skill-card-front .skill-icon {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .skills .skill-card-front p {
+        font-size: 8px;
+    }
+
+    .skills .skill-card-back h3 {
+        font-size: 10px;
+    }
+
+    .skills .skill-card-back p {
+        font-size: 7px;
+    }
+
+}
