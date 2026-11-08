@@ -1,4 +1,16 @@
-/* GENERAL STYLE */
+
+/* =========================================
+   GENERAL STYLE
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
 
 body {
     margin: 0;
@@ -11,7 +23,9 @@ body {
 }
 
 
-/* NAVIGATION */
+/* =========================================
+   NAVIGATION
+========================================= */
 
 .header {
     padding: 0 50px;
@@ -19,12 +33,10 @@ body {
     top: 0;
     left: 0;
     z-index: 1000;
-
     width: 90%;
     margin: 0 0 100px 50px;
-
     border-spacing: 0;
-    background: #000000;
+    background: #000;
     box-sizing: border-box;
 }
 
@@ -51,10 +63,17 @@ body {
     font-size: 10px;
     letter-spacing: 1px;
     margin-left: 30px;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #fff;
 }
 
 
-/* HOME */
+/* =========================================
+   HOME / HERO
+========================================= */
 
 .hero {
     width: 83%;
@@ -67,6 +86,7 @@ body {
 .hero-text {
     width: 55%;
     vertical-align: middle;
+    padding-right: 35px;
 }
 
 .eyebrow {
@@ -79,6 +99,7 @@ body {
     color: #e5e9f0;
     font-size: 68px;
     letter-spacing: 8px;
+    line-height: 1.08;
     margin: 12px 0;
 }
 
@@ -86,6 +107,7 @@ body {
     color: #aeb7c5;
     font-size: 9px;
     letter-spacing: 2px;
+    line-height: 1.8;
     margin: 8px 0 30px;
 }
 
@@ -103,10 +125,9 @@ body {
 .hero-picture img {
     display: block;
     width: 100%;
-    height: 330px;
+    height: 380px;
     object-fit: cover;
     object-position: center;
-    box-sizing: border-box;
     border: 1px solid #343c48;
     border-radius: 30px;
 }
@@ -123,6 +144,13 @@ body {
     text-decoration: none;
     font-size: 22px;
     margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.round-link:hover {
+    background: #151a22;
+    border-color: #aeb7c5;
+    transform: translateY(3px);
 }
 
 .scroll-text {
@@ -133,7 +161,9 @@ body {
 }
 
 
-/* PANELS */
+/* =========================================
+   PANELS
+========================================= */
 
 .panel {
     width: 86%;
@@ -143,7 +173,6 @@ body {
     border: 1px solid #202630;
     border-radius: 25px;
     border-spacing: 25px;
-    box-sizing: border-box;
 }
 
 h2 {
@@ -155,11 +184,12 @@ h2 {
 }
 
 
-/* ABOUT */
+/* =========================================
+   ABOUT
+========================================= */
 
 .about-text {
     width: 50%;
-    box-sizing: border-box;
     vertical-align: middle;
     padding: 0 0 0 30px;
     float: right;
@@ -167,7 +197,6 @@ h2 {
 
 .about-picture {
     width: 50%;
-    box-sizing: border-box;
     float: left;
 }
 
@@ -180,35 +209,27 @@ h2 {
 }
 
 
-/* LEARN MORE AND VIEW PROJECT */
+/* =========================================
+   BUTTONS
+========================================= */
 
 .outline-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     color: #dce2eb;
     background-color: transparent;
-
     font-family: "Saira", sans-serif;
     font-size: 11px;
     font-weight: 400;
     letter-spacing: 1px;
-
     text-decoration: none;
-
     border: 1px solid #394250;
     border-radius: 30px;
-
     padding: 10px 22px;
     margin-top: 15px;
-
     cursor: pointer;
-
-    transition: color 0.3s ease,
-                background-color 0.3s ease,
-                border-color 0.3s ease,
-                transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .outline-link:link,
@@ -218,15 +239,14 @@ h2 {
 }
 
 .outline-link:hover {
-    color: #ffffff;
+    color: #fff;
     background-color: #11151b;
     border-color: #687383;
-    text-decoration: none;
     transform: translateY(-2px);
 }
 
 .outline-link:active {
-    color: #ffffff;
+    color: #fff;
     background-color: #080b10;
     transform: translateY(0);
 }
@@ -237,7 +257,9 @@ h2 {
 }
 
 
-/* SKILLS */
+/* =========================================
+   SKILLS
+========================================= */
 
 .section {
     width: 84%;
@@ -293,24 +315,15 @@ h2 {
     border-radius: 10px;
 }
 
-.python-bar {
-    width: 85%;
-}
-
-.html-bar {
-    width: 90%;
-}
-
-.css-bar {
-    width: 95%;
-}
-
-.design-bar {
-    width: 95%;
-}
+.python-bar { width: 85%; }
+.html-bar { width: 90%; }
+.css-bar { width: 95%; }
+.design-bar { width: 95%; }
 
 
-/* PROJECTS */
+/* =========================================
+   PROJECTS
+========================================= */
 
 .projects {
     border-spacing: 15px;
@@ -364,7 +377,9 @@ h2 {
 }
 
 
-/* ACHIEVEMENTS */
+/* =========================================
+   ACHIEVEMENTS
+========================================= */
 
 .achievements {
     border: none;
@@ -375,24 +390,33 @@ h2 {
 
 .achievement-card {
     width: 50%;
-    height: 210px;
-    padding: 25px;
+    height: auto;
+    min-height: 210px;
+    padding: 28px;
     vertical-align: top;
-
     border: 1px solid #242b36;
-    border-radius: 15px;
+    border-radius: 18px;
     background-color: #070a0e;
+    transition: all 0.3s ease;
+}
+
+.achievement-card:hover {
+    border-color: #566273;
+    background-color: #0b0f15;
+    transform: translateY(-4px);
 }
 
 .achievement-icon {
     color: #dce2eb;
     font-size: 25px;
+    margin-bottom: 10px;
 }
 
 .achievement-card h3 {
     color: #dce1e9;
     font-size: 14px;
     font-weight: 500;
+    line-height: 1.5;
 }
 
 .achievement-card p {
@@ -407,7 +431,9 @@ h2 {
 }
 
 
-/* CONTACT */
+/* =========================================
+   CONTACT
+========================================= */
 
 .contact {
     border-spacing: 15px;
@@ -442,7 +468,6 @@ h2 {
     margin-bottom: 12px;
     font-family: "Saira", sans-serif;
     font-size: 11px;
-    box-sizing: border-box;
 }
 
 .contact-fields button {
@@ -458,13 +483,15 @@ h2 {
 }
 
 .contact-fields button:hover {
-    color: #ffffff;
+    color: #fff;
     background-color: #11151b;
     border-color: #687383;
 }
 
 
-/* FOOTER */
+/* =========================================
+   FOOTER
+========================================= */
 
 .footer {
     width: 86%;
@@ -476,20 +503,41 @@ h2 {
 }
 
 
-/* SMOOTH SCROLL */
+/* =========================================
+   TABLET
+========================================= */
 
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 100px;
+@media screen and (max-width: 1024px) {
+
+    .hero {
+        width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 54px;
+        letter-spacing: 5px;
+    }
+
+    .hero-picture img {
+        height: 320px;
+    }
+
+    .panel,
+    .section {
+        width: 90%;
+    }
+
+    .panel {
+        padding: 30px;
+    }
 }
 
 
-/* MOBILE */
+/* =========================================
+   MOBILE
+========================================= */
 
-
-@media (max-width: 768px) {
-
-    /* GENERAL */
+@media screen and (max-width: 768px) {
 
     body {
         width: 100%;
@@ -500,164 +548,140 @@ html {
     /* NAVIGATION */
 
     .header {
-        position: fixed;
+        position: fixed !important;
         top: 0;
-        left: 0;
-
-        width: 100%;
-        margin: 0;
-        padding: 12px 15px;
-
-        display: block;
-        box-sizing: border-box;
-
+        left: 0 !important;
+        right: 0;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 12px 8px !important;
         background: #000;
+        text-align: center !important;
+        box-sizing: border-box;
         z-index: 1000;
     }
 
-    .logo {
+    .header tbody {
         width: 100%;
-        display: block;
+    }
 
-        text-align: center;
+    .header tr {
+        width: 100%;
+    }
+
+    .header td {
+        text-align: center !important;
+    }
+
+    .logo {
+        display: block;
+        width: 100% !important;
+        text-align: center !important;
         font-size: 16px;
         letter-spacing: 3px;
-
-        margin-bottom: 15px;
+        padding-bottom: 14px;
     }
 
     .navigation {
-        width: 100%;
-
-        display: flex;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
         flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-
-        gap: 12px;
-
-        text-align: center;
+        width: 100% !important;
+        gap: 16px 20px;
+        margin: 0 auto !important;
+        padding: 3px 8px !important;
+        text-align: center !important;
+        box-sizing: border-box;
     }
 
     .navigation a {
-        margin: 0;
+        display: inline-block !important;
+        margin: 0 !important;
+        padding: 5px 2px;
         font-size: 9px;
         letter-spacing: 1px;
+        white-space: nowrap;
     }
 
 
-    
-/* HOME - MOBILE IMPROVEMENT */
+    /* HERO */
 
-.hero {
-    width: 90%;
-    margin: 0 auto 60px;
-    padding-top: 125px;
+    .hero {
+        width: 90%;
+        margin: 0 auto 65px;
+        padding-top: 125px;
+        display: block;
+    }
 
-    display: block;
-    box-sizing: border-box;
-}
+    .hero tbody,
+    .hero tr {
+        display: block;
+        width: 100%;
+    }
 
-.hero-text {
-    width: 100%;
-    display: block;
+    .hero-text,
+    .hero-picture {
+        display: block;
+        width: 100%;
+    }
 
-    padding: 0;
-    margin: 0;
+    .hero-text {
+        padding: 0;
+        text-align: center;
+    }
 
-    text-align: center;
-}
+    .hero h1 {
+        font-size: clamp(42px, 12vw, 64px);
+        letter-spacing: 7px;
+        line-height: 1;
+        margin: 12px 0 16px;
+        text-align: center;
+    }
 
-.eyebrow {
-    color: #9ba5b5;
-    font-size: 9px;
-    letter-spacing: 2px;
-    margin-bottom: 12px;
-}
+    .role {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+        line-height: 1.9;
+        margin: 0 auto 22px;
+        text-align: center;
+    }
 
-.hero h1 {
-    color: #e5e9f0;
+    .description {
+        max-width: 430px;
+        font-size: 13px;
+        line-height: 1.9;
+        margin: 0 auto;
+        text-align: center;
+    }
 
-    font-size: 38px;
-    letter-spacing: 5px;
+    .hero-picture {
+        margin: 32px 0 0;
+        text-align: center;
+    }
 
-    margin: 10px 0 15px;
-    text-align: center;
-}
+    .hero-picture img {
+        width: 100%;
+        height: clamp(230px, 72vw, 350px);
+        object-fit: cover;
+        object-position: center 35%;
+        border-radius: 22px;
+    }
 
-.role {
-    color: #aeb7c5;
+    .round-link {
+        width: 38px;
+        height: 38px;
+        line-height: 38px;
+        font-size: 18px;
+        margin-top: 22px;
+    }
 
-    font-size: 9px;
-    letter-spacing: 1.5px;
-
-    margin: 0 0 25px;
-    text-align: center;
-}
-
-.description {
-    color: #c1c7d0;
-
-    font-size: 12px;
-    line-height: 1.9;
-
-    margin: 0 auto;
-    text-align: center;
-}
-
-.hero-picture {
-    width: 100%;
-    display: block;
-
-    margin: 30px 0 0;
-    padding: 0;
-
-    text-align: center;
-}
-
-.hero-picture img {
-    display: block;
-
-    width: 100%;
-    height: 230px;
-
-    object-fit: cover;
-    object-position: center;
-
-    box-sizing: border-box;
-
-    border: 1px solid #343c48;
-    border-radius: 22px;
-}
-
-.round-link {
-    display: inline-block;
-
-    width: 38px;
-    height: 38px;
-    line-height: 38px;
-
-    text-align: center;
-
-    border: 1px solid #687383;
-    border-radius: 50%;
-
-    color: #fff;
-    text-decoration: none;
-
-    font-size: 18px;
-
-    margin-top: 25px;
-}
-
-.scroll-text {
-    color: #aeb7c5;
-
-    font-size: 8px;
-    letter-spacing: 1.5px;
-
-    margin-left: 10px;
-}
+    .scroll-text {
+        font-size: 8px;
+        letter-spacing: 1.8px;
+        margin-left: 10px;
+    }
 
 
     /* PANELS */
@@ -665,11 +689,7 @@ html {
     .panel {
         width: 90%;
         margin: 0 auto 45px;
-
         padding: 22px;
-
-        box-sizing: border-box;
-
         border-radius: 20px;
         border-spacing: 0;
     }
@@ -678,7 +698,6 @@ html {
         font-size: 23px;
         letter-spacing: 3px;
         margin-bottom: 20px;
-
         text-align: center;
     }
 
@@ -695,7 +714,6 @@ html {
     .about-text {
         padding: 0;
         margin-bottom: 25px;
-
         text-align: center;
     }
 
@@ -707,10 +725,7 @@ html {
     .about-picture img {
         width: 100%;
         height: 230px;
-
         object-fit: cover;
-        object-position: center;
-
         border-radius: 15px;
     }
 
@@ -729,20 +744,15 @@ html {
 
     .card-table {
         width: 100%;
-
         display: block;
         margin: 0;
-
         border-spacing: 0;
-        border-collapse: separate;
     }
 
     .card-table tbody {
         width: 100%;
-
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-
         gap: 12px;
     }
 
@@ -753,15 +763,9 @@ html {
     .skill-card {
         width: 100%;
         height: 155px;
-
         display: block;
         padding: 15px;
-
-        box-sizing: border-box;
-
-        vertical-align: initial;
         text-align: center;
-
         border-radius: 15px;
     }
 
@@ -777,15 +781,10 @@ html {
 
     .skill-card span {
         float: none;
-        display: inline;
         margin-left: 5px;
     }
 
-    .bar {
-        width: 100%;
-        height: 4px;
-    }
-
+    .bar,
     .python-bar,
     .html-bar,
     .css-bar,
@@ -798,19 +797,14 @@ html {
 
     .projects {
         width: 100%;
-
         display: block;
-
         border-spacing: 0;
-        border-collapse: separate;
     }
 
     .projects tbody {
         width: 100%;
-
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-
         gap: 12px;
     }
 
@@ -831,26 +825,16 @@ html {
 
     .project-card {
         width: 100%;
-        height: auto;
-
         display: block;
         padding: 12px;
-
-        box-sizing: border-box;
-        vertical-align: initial;
-
         text-align: center;
-
         border-radius: 15px;
     }
 
     .project-card img {
         width: 100%;
         height: 125px;
-
         object-fit: cover;
-        object-position: center;
-
         border-radius: 10px;
     }
 
@@ -875,58 +859,73 @@ html {
 
     .achievements {
         width: 100%;
-
         display: block;
-
         border-spacing: 0;
-        border-collapse: separate;
     }
 
     .achievements tbody {
         width: 100%;
-
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-
-        gap: 12px;
+        display: block;
     }
 
     .achievements tr {
-        display: contents;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .achievements td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .achievements h2 {
+        width: 100%;
+        font-size: 23px;
+        letter-spacing: 3px;
+        line-height: 1.4;
+        text-align: left;
+        margin: 0 0 12px;
+        overflow-wrap: anywhere;
     }
 
     .achievement-card {
         width: 100%;
+        min-width: 0;
+        min-height: 0;
         height: auto;
-        min-height: 175px;
-
         display: block;
-        padding: 12px;
+        padding: 22px 20px;
+        text-align: left;
+        border-radius: 17px;
+    }
 
-        box-sizing: border-box;
-        vertical-align: initial;
-
-        text-align: center;
-
-        border-radius: 15px;
+    .achievement-card:hover {
+        transform: none;
     }
 
     .achievement-icon {
-        font-size: 22px;
+        font-size: 24px;
+        margin-bottom: 8px;
     }
 
     .achievement-card h3 {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 1.5;
+        margin: 8px 0 10px;
     }
 
     .achievement-card p {
-        font-size: 10px;
-        line-height: 1.7;
+        font-size: 11px;
+        line-height: 1.8;
+        margin: 0 0 14px;
     }
 
     .achievement-card small {
-        font-size: 8px;
+        display: block;
+        font-size: 9px;
     }
 
 
@@ -934,18 +933,11 @@ html {
 
     .contact {
         width: 100%;
-
         display: block;
-
         border-spacing: 0;
-        border-collapse: separate;
     }
 
-    .contact tbody {
-        width: 100%;
-        display: block;
-    }
-
+    .contact tbody,
     .contact tr {
         display: block;
         width: 100%;
@@ -954,17 +946,13 @@ html {
     .contact-details,
     .contact-fields {
         width: 100%;
-
         display: block;
-        box-sizing: border-box;
     }
 
     .contact-details {
         padding: 0 0 20px;
-
         border-right: none;
         border-bottom: 1px solid #252d38;
-
         text-align: center;
     }
 
@@ -981,11 +969,8 @@ html {
     .contact-fields input,
     .contact-fields textarea {
         width: 100%;
-
         padding: 12px;
         margin-bottom: 12px;
-
-        box-sizing: border-box;
         font-size: 11px;
     }
 
@@ -1000,17 +985,161 @@ html {
     .footer {
         width: 90%;
         margin: 0 auto;
-
         padding-bottom: 20px;
-
         font-size: 8px;
         letter-spacing: 0.5px;
-
         text-align: center;
     }
+}
 
-    .footer-links {
-        text-align: center;
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media screen and (max-width: 480px) {
+
+    .header {
+        padding: 12px 8px !important;
     }
 
+    .logo {
+        font-size: 14px;
+        letter-spacing: 2px;
+        padding-bottom: 13px;
+    }
+
+    .navigation {
+        gap: 12px 15px;
+        padding: 3px 5px !important;
+    }
+
+    .navigation a {
+        font-size: 8px;
+        letter-spacing: 0.7px;
+        padding: 5px 1px;
+    }
+
+    .hero {
+        width: 88%;
+        padding-top: 118px;
+        margin-bottom: 55px;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 11vw, 48px);
+        letter-spacing: 5px;
+    }
+
+    .role {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .description {
+        font-size: 12px;
+        line-height: 1.85;
+    }
+
+    .hero-picture img {
+        height: 245px;
+        border-radius: 18px;
+    }
+
+    .panel {
+        padding: 17px;
+    }
+
+    h2 {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    .skill-card {
+        height: 140px;
+        padding: 11px;
+    }
+
+    .skill-icon {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .project-card {
+        padding: 9px;
+    }
+
+    .project-card img {
+        height: 105px;
+    }
+
+    .project-card h3 {
+        font-size: 11px;
+    }
+
+    .project-card p {
+        font-size: 9px;
+    }
+
+    .achievements h2 {
+        font-size: 21px;
+        letter-spacing: 2px;
+    }
+
+    .achievement-card {
+        padding: 19px 17px;
+    }
+
+    .achievement-card h3 {
+        font-size: 13px;
+    }
+
+    .achievement-card p {
+        font-size: 10px;
+    }
+
+    .about-picture img {
+        height: 210px;
+    }
+}
+
+
+/* =========================================
+   EXTRA SMALL DEVICES
+========================================= */
+
+@media screen and (max-width: 360px) {
+
+    .header {
+        padding: 10px 5px !important;
+    }
+
+    .logo {
+        font-size: 12px;
+    }
+
+    .navigation {
+        gap: 9px 10px;
+    }
+
+    .navigation a {
+        font-size: 7px;
+    }
+
+    .hero {
+        padding-top: 110px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+        letter-spacing: 4px;
+    }
+
+    .hero-picture img {
+        height: 215px;
+    }
+
+    .achievement-card {
+        padding: 16px;
+    }
 }
