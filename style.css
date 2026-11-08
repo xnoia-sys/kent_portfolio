@@ -1,12 +1,13 @@
 /* GENERAL STYLE */
 
 body {
-    margin 0;
+    margin: 0;
     padding: 0;
     background-color: #000;
     color: #e5e9f0;
     font-family: "Saira", sans-serif;
     font-size: 13px;
+    overflow-x: hidden;
 }
 
 
@@ -17,14 +18,15 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1000;
 
     width: 90%;
     margin: 0 0 100px 50px;
 
     border-spacing: 0;
     background: #000000;
+    box-sizing: border-box;
 }
-
 
 .logo {
     width: 50%;
@@ -57,7 +59,9 @@ body {
 .hero {
     width: 83%;
     margin: 0 auto 100px;
+    padding-top: 100px;
     border-spacing: 0;
+    box-sizing: border-box;
 }
 
 .hero-text {
@@ -97,8 +101,12 @@ body {
 }
 
 .hero-picture img {
+    display: block;
     width: 100%;
     height: 330px;
+    object-fit: cover;
+    object-position: center;
+    box-sizing: border-box;
     border: 1px solid #343c48;
     border-radius: 30px;
 }
@@ -135,6 +143,7 @@ body {
     border: 1px solid #202630;
     border-radius: 25px;
     border-spacing: 25px;
+    box-sizing: border-box;
 }
 
 h2 {
@@ -150,35 +159,81 @@ h2 {
 
 .about-text {
     width: 50%;
+    box-sizing: border-box;
     vertical-align: middle;
-    padding-right: 0;
-    padding-left: 30px;
+    padding: 0 0 0 30px;
     float: right;
 }
 
 .about-picture {
     width: 50%;
+    box-sizing: border-box;
     float: left;
 }
 
 .about-picture img {
+    display: block;
     width: 100%;
     height: 315px;
+    object-fit: cover;
     border-radius: 20px;
-}aw
+}
 
-/* BUTTON LINKS */
+
+/* LEARN MORE AND VIEW PROJECT */
 
 .outline-link {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #dce2eb;
+    background-color: transparent;
+
+    font-family: "Saira", sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    text-decoration: none;
+
+    border: 1px solid #394250;
+    border-radius: 30px;
+
+    padding: 10px 22px;
+    margin-top: 15px;
+
+    cursor: pointer;
+
+    transition: color 0.3s ease,
+                background-color 0.3s ease,
+                border-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.outline-link:link,
+.outline-link:visited {
     color: #dce2eb;
     text-decoration: none;
-    font-size: 9px;
-    letter-spacing: 1px;
-    border: 1px solid #394250;
-    border-radius: 25px;
-    padding: 13px 20px;
-    margin-top: 15px;
+}
+
+.outline-link:hover {
+    color: #ffffff;
+    background-color: #11151b;
+    border-color: #687383;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+.outline-link:active {
+    color: #ffffff;
+    background-color: #080b10;
+    transform: translateY(0);
+}
+
+.outline-link:focus-visible {
+    outline: 1px solid #aeb7c5;
+    outline-offset: 4px;
 }
 
 
@@ -282,8 +337,10 @@ h2 {
 }
 
 .project-card img {
+    display: block;
     width: 100%;
     height: 200px;
+    object-fit: cover;
     border-radius: 12px;
 }
 
@@ -310,7 +367,10 @@ h2 {
 /* ACHIEVEMENTS */
 
 .achievements {
+    border: none;
+    outline: none;
     border-spacing: 15px;
+    background: transparent;
 }
 
 .achievement-card {
@@ -318,6 +378,7 @@ h2 {
     height: 210px;
     padding: 25px;
     vertical-align: top;
+
     border: 1px solid #242b36;
     border-radius: 15px;
     background-color: #070a0e;
@@ -381,6 +442,7 @@ h2 {
     margin-bottom: 12px;
     font-family: "Saira", sans-serif;
     font-size: 11px;
+    box-sizing: border-box;
 }
 
 .contact-fields button {
@@ -391,6 +453,14 @@ h2 {
     padding: 8px 18px;
     font-family: "Saira", sans-serif;
     font-size: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-fields button:hover {
+    color: #ffffff;
+    background-color: #11151b;
+    border-color: #687383;
 }
 
 
@@ -408,7 +478,506 @@ h2 {
     text-align: right;
 }
 
+
+/* SMOOTH SCROLL */
+
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
+
+/* ============================= */
+/* RESPONSIVE: PC AND CELLPHONE */
+/* ============================= */
+
+
+/* PC */
+
+@media (min-width: 769px) {
+
+    .header {
+        display: table;
+    }
+
+    .hero {
+        width: 83%;
+        padding-top: 100px;
+    }
+
+    .hero-text {
+        width: 55%;
+    }
+
+    .hero-picture {
+        width: 45%;
+    }
+
+    .about-text,
+    .about-picture {
+        width: 50%;
+    }
+
+    .skill-card {
+        width: 25%;
+    }
+
+    .project-card,
+    .achievement-card {
+        width: 50%;
+    }
+
+}
+
+
+/* CELLPHONE */
+
+@media (max-width: 768px) {
+
+    /* GENERAL */
+
+    body {
+        font-size: 12px;
+    }
+
+
+    /* NAVIGATION */
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        width: 100%;
+        margin: 0;
+        padding: 12px 5%;
+
+        box-sizing: border-box;
+        background-color: #000;
+        z-index: 1000;
+    }
+
+    .logo {
+        width: 100%;
+        font-size: 16px;
+        letter-spacing: 3px;
+        margin-bottom: 10px;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        width: 100%;
+        gap: 8px;
+
+        text-align: left;
+    }
+
+    .navigation a {
+        display: block;
+        margin: 0;
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+
+    /* HOME */
+
+    .hero {
+        width: 90%;
+        margin: 0 auto 60px;
+        padding-top: 180px;
+        border-spacing: 0;
+    }
+
+    .hero-text {
+        width: 100%;
+        display: block;
+        padding-bottom: 25px;
+    }
+
+    .eyebrow {
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+        letter-spacing: 5px;
+        margin: 10px 0;
+    }
+
+    .role {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+        margin: 8px 0 20px;
+    }
+
+    .description {
+        font-size: 12px;
+        line-height: 1.9;
+    }
+
+    .hero-picture {
+        width: 100%;
+        display: block;
+        text-align: left;
+    }
+
+    .hero-picture img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 20px;
+    }
+
+    .round-link {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 18px;
+        margin-top: 15px;
+    }
+
+    .scroll-text {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+        margin-left: 8px;
+    }
+
+
+    /* PANELS */
+
+    .panel {
+        width: 90%;
+        margin: 0 auto 45px;
+        padding: 22px;
+        box-sizing: border-box;
+
+        border-radius: 20px;
+        border-spacing: 10px;
+    }
+
+    h2 {
+        font-size: 23px;
+        letter-spacing: 3px;
+        margin-bottom: 15px;
+    }
+
+
+    /* ABOUT */
+
+    .about-text,
+    .about-picture {
+        width: 100%;
+        display: block;
+        float: none;
+    }
+
+    .about-text {
+        padding: 0;
+        margin-bottom: 25px;
+    }
+
+    .about-picture img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    .about-text p {
+        font-size: 12px;
+        line-height: 1.9;
+    }
+
+
+    /* SKILLS */
+
+    .section {
+        width: 90%;
+        margin: 0 auto 50px;
+    }
+
+    .card-table {
+        width: 100%;
+        margin: 0;
+        border-spacing: 8px;
+    }
+
+    .skill-card {
+        width: 50%;
+        height: 145px;
+        padding: 12px;
+        box-sizing: border-box;
+    }
+
+    .skill-icon {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .skill-card p {
+        font-size: 10px;
+    }
+
+    .skill-card span {
+        font-size: 10px;
+    }
+
+    .bar,
+    .python-bar,
+    .html-bar,
+    .css-bar,
+    .design-bar {
+        height: 4px;
+    }
+
+
+    /* PROJECTS */
+
+    .projects {
+        width: 100%;
+        border-spacing: 8px;
+    }
+
+    .projects h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .featured {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .project-card {
+        width: 50%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .project-card img {
+        width: 100%;
+        height: 130px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .project-card h3 {
+        font-size: 13px;
+    }
+
+    .project-card p {
+        font-size: 10px;
+        line-height: 1.7;
+    }
+
+    .tags {
+        font-size: 9px;
+        letter-spacing: 0.5px;
+    }
+
+
+    /* ACHIEVEMENTS */
+
+    .achievements {
+        width: 100%;
+        border-spacing: 8px;
+    }
+
+    .achievement-card {
+        width: 50%;
+        height: auto;
+        min-height: 160px;
+        padding: 12px;
+        box-sizing: border-box;
+        vertical-align: top;
+
+        border: 1px solid #242b36;
+        border-radius: 12px;
+        background-color: #070a0e;
+    }
+
+    .achievement-icon {
+        font-size: 22px;
+    }
+
+    .achievement-card h3 {
+        font-size: 12px;
+    }
+
+    .achievement-card p {
+        font-size: 10px;
+        line-height: 1.7;
+    }
+
+    .achievement-card small {
+        font-size: 8px;
+    }
+
+
+    /* CONTACT */
+
+    .contact {
+        width: 100%;
+        border-spacing: 0;
+    }
+
+    .contact-details,
+    .contact-fields {
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+    }
+
+    .contact-details {
+        padding: 0 0 20px;
+        border-right: none;
+        border-bottom: 1px solid #252d38;
+    }
+
+    .contact-details p {
+        font-size: 10px;
+        margin-top: 15px;
+    }
+
+    .contact-fields {
+        padding-top: 20px;
+    }
+
+    .contact-fields input,
+    .contact-fields textarea {
+        width: 100%;
+        padding: 12px;
+        box-sizing: border-box;
+        font-size: 11px;
+    }
+
+    .contact-fields button {
+        font-size: 10px;
+        padding: 9px 18px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 20px;
+        font-size: 8px;
+        letter-spacing: 0.5px;
+    }
+
+    .footer-links {
+        text-align: left;
+    }
+
+}
+
+
+/* SMALL CELLPHONES */
+
+@media (max-width: 480px) {
+
+    .header {
+        padding: 10px 5%;
+    }
+
+    .logo {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .navigation {
+        gap: 6px;
+    }
+
+    .navigation a {
+        font-size: 9px;
+    }
+
+    .hero {
+        width: 92%;
+        padding-top: 170px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+        letter-spacing: 4px;
+    }
+
+    .hero-picture img {
+        height: 210px;
+    }
+
+    .panel {
+        width: 92%;
+        padding: 16px;
+        border-radius: 15px;
+    }
+
+    .section {
+        width: 92%;
+    }
+
+    .skill-card {
+        height: 130px;
+        padding: 10px;
+    }
+
+    .skill-icon {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .project-card {
+        padding: 8px;
+    }
+
+    .project-card img {
+        height: 100px;
+    }
+
+    .project-card h3 {
+        font-size: 11px;
+    }
+
+    .project-card p {
+        font-size: 9px;
+    }
+
+    .achievement-card {
+        padding: 10px;
+        min-height: 145px;
+    }
+
+    .achievement-card h3 {
+        font-size: 11px;
+    }
+
+    .achievement-card p {
+        font-size: 9px;
+    }
+
+    .achievement-card small {
+        font-size: 7px;
+    }
+
+}
+
+
+/* SMOOTH SCROLL */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 180px;
+}
