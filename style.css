@@ -564,6 +564,34 @@ h2 {
 
 /* contact */
 
+
+td p {
+    margin: 12px 0;
+    color: #9ba5b5;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* CONTACT LINKS */
+
+td a {
+    color: #9ba5b5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* HOVER EFFECT */
+
+td a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* CLICKABLE CONTACT INFORMATION */
+
+td a:active {
+    color: #e5e9f0;
+}
 .contact {
     border-spacing: 15px;
 }
